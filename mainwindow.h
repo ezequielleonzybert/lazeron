@@ -3,8 +3,8 @@
 
 #include <QMainWindow>
 #include <QPushButton>
-#include <QSerialPort>
-#include <QVBoxLayout>
+#include <libusb.h>
+#include <QString>
 #include <QDebug>
 
 class MainWindow : public QMainWindow
@@ -14,12 +14,6 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
-private slots:
-    void onButtonClicked();
-
-private:
-    QPushButton *btnLoad;
 };
 
 
